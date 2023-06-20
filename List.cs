@@ -27,6 +27,7 @@ namespace LinkedList
                 temp.Next = node;
 
             }
+            Console.WriteLine($"{node.Data} inserted into linked list ");
 
         }
 
