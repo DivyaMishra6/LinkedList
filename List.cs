@@ -89,25 +89,43 @@ namespace LinkedList
         //    return this.head;
         //}
 
-        public Node DeleteLast()
+        //public Node DeleteLast()
+        //{
+        //    if (this.head == null)
+        //    {
+        //        return null;
+        //    }
+
+        //    if (head.Next == null)
+        //    {
+        //        return null;
+        //    }
+        //    Node newNode = head;
+        //    while (newNode.Next.Next != null)
+        //    {
+        //        newNode = newNode.Next;
+        //    }
+
+        //    newNode.Next = null;
+        //    return head;
+        //}
+
+        public void SearchNode(int data)
         {
-            if (this.head == null)
+            int p = 0;
+            Node temp = this.head;
+            while (temp != null)
             {
-                return null;
+
+                if (temp.Data.Equals(data))
+                {
+                    Console.WriteLine("The Node " + data + " Present in Position :" + p);
+
+                }
+                temp = temp.Next;
+                p++;
             }
 
-            if (head.Next == null)
-            {
-                return null;
-            }
-            Node newNode = head;
-            while (newNode.Next.Next != null)
-            {
-                newNode = newNode.Next;
-            }
-
-            newNode.Next = null;
-            return head;
         }
     }
 }
