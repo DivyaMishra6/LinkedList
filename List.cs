@@ -78,15 +78,36 @@ namespace LinkedList
         //}
 
 
-        //Delete node
-        public Node Delete()
+        //Delete first node
+        //public Node DeleteFirst()
+        //{
+        //    if (this.head == null)
+        //    {
+        //        return null;
+        //    }
+        //    this.head = this.head.Next;
+        //    return this.head;
+        //}
+
+        public Node DeleteLast()
         {
             if (this.head == null)
             {
                 return null;
             }
-            this.head = this.head.Next;
-            return this.head;
+
+            if (head.Next == null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while (newNode.Next.Next != null)
+            {
+                newNode = newNode.Next;
+            }
+
+            newNode.Next = null;
+            return head;
         }
     }
 }
