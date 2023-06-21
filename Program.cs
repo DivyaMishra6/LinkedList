@@ -24,8 +24,8 @@
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
 
-            list.Delete();
-            Console.WriteLine("After delete first element ");
+            list.DeleteLast();
+            Console.WriteLine("After delete Last element ");
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
 
